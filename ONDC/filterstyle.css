@@ -330,7 +330,7 @@ footer{
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: hsla(200, 56%, 13%, 0.592);
-  margin-top: -12%;
+  margin-top: 10%;
 }
 
 footer .top,
