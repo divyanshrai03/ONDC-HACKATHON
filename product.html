@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="product.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">Electronics</button>
+            <div class="dropdown-content">
+                <a href="#laptop">Laptop</a>
+                <a href="#mobile">Mobile</a>
+                <a href="#tv">TV</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Fashion</button>
+            <div class="dropdown-content">
+                <a href="#men">Men</a>
+                <a href="#women">Women</a>
+                <a href="#kid">Kid</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Accessories</button>
+            <div class="dropdown-content">
+                <a href="#watch">Watch</a>
+                <a href="#ring">Ring</a>
+                <a href="#necklace">Necklace</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Home Decor</button>
+            <div class="dropdown-content">
+                <a href="#curtain">Curtain</a>
+                <a href="#blanket">Blanket</a>
+                <a href="#decorative">Decorative</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Kitchen</button>
+            <div class="dropdown-content">
+                <a href="#utensils">Utensils</a>
+                <a href="#cookware">Cookware</a>
+                <a href="#appliances">Appliances</a>
+            </div>
+        </div>
+    
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar" id="searchBar">
+        </div>
+    
+        <div class="user-logo">
+            <img src="logo.jpg" alt="User Logo" width="30" height="30">
+            <div class="menu-content">
+              <a href="#account-info">My Account</a>
+              <a href="#order">My Order</a>
+              <a href="#wishlist">My Wishlist</a>
+              <a href="#contactus">Contact Us</a>
+              <a href="login_reg.html">Log Out</a>
+            </div>
+          </div>
+      
+      </nav>
+      
+<div class="container">
+    <div class="product-card">
+        <div class="product-images">
+            <img src="tranding-food-1.png" alt="Product Image" id="mainImage">
+            <div class="thumbnail-images">
+                <img src="tranding-food-2.png" alt="Thumbnail 1" onclick="changeImage('tranding-food-2.png')">
+                <img src="tranding-food-7.png" alt="Thumbnail 2" onclick="changeImage('tranding-food-7.png')">
+                <img src="tranding-food-3.png" alt="Thumbnail 3" onclick="changeImage('tranding-food-3.png')">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1>Product Name</h1>
+            <div class="ratings">⭐⭐⭐⭐⭐</div>
+            <p>Reviews: 15</p>
+            <p>Size: XL</p>
+            <p>Color: Blue</p>
+            <p>Material: Cotton</p>
+            <p>Price: Rs. 6,969</p>
+            <p>Availability: In Stock</p>
+            <p>Shipping: Free Shipping</p>
+            <p>Estimated Delivery: <span id="deliveryDate"></span></p>
+            <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+            <button class="buy-now-btn" onclick="buyNow()">Buy Now</button>
+            <button class="wishlist-btn" onclick="addToWishlist()">Add to Wishlist</button>
+        </div>
+    </div>
+</div>
+
+<div class="user-reviews">
+    <h2>User Reviews</h2>
+
+    <div id="userReviewForm">
+        <h3>Submit Your Review</h3>
+        <form id="reviewForm">
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" required>
+
+            <label for="userRating">Rating:</label>
+            <select id="userRating" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+
+            <label for="userComment">Your Comment:</label>
+            <textarea id="userComment" rows="3" required></textarea>
+
+            <button type="button" onclick="submitReview()">Submit Review</button>
+        </form>
+    </div>
+
+
+    <div class="review">
+        <div class="user-avatar">1</div>
+        <div class="review-details">
+            <div class="user-name">Kamlesh</div>
+            <div class="rating">⭐⭐</div>
+            <p class="comment">Dukaan pe 3 rupee sasta hai.</p>
+        </div>
+    </div>
+
+    <div class="review">
+        <div class="user-avatar">2</div>
+        <div class="review-details">
+            <div class="user-name">Suresh</div>
+            <div class="rating">⭐⭐⭐⭐</div>
+            <p class="comment">Ok</p>
+        </div>
+    </div>
+
+    <div class="review">
+        <div class="user-avatar">3</div>
+        <div class="review-details">
+            <div class="user-name">Bikaash</div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p class="comment">Khao maa kasam.</p>
+        </div>
+    </div>
+
+    <div class="review">
+        <div class="user-avatar">4</div>
+        <div class="review-details">
+            <div class="user-name">AttitudeBOy69</div>
+            <div class="rating">⭐⭐⭐⭐</div>
+            <p class="comment">Karab Product hai</p>
+        </div>
+    </div>
+
+    <div class="review">
+        <div class="user-avatar">5</div>
+        <div class="review-details">
+            <div class="user-name">Savitri</div>
+            <div class="rating">⭐⭐⭐</div>
+            <p class="comment">Dilevary boy behaviour was gud.</p>
+        </div>
+    </div>
+    <div class="similar-products">
+        <h2>Similar Products</h2>
+
+        <div class="product">
+            <img src="tranding-food-5.png" alt="Similar Product 1">
+            <h3>Similar Product 1</h3>
+            <p class="price">Rs. 69.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="tranding-food-5.png" alt="Similar Product 2">
+            <h3>Similar Product 2</h3>
+            <p class="price">Rs. 96.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="tranding-food-6.png" alt="Similar Product 3">
+            <h3>Similar Product 3</h3>
+            <p class="price">Rs. 69.96</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+      
+
+<footer>
+    <div class="top">
+      <div class="social-links">
+        <a href="#"><i class='bx bxl-instagram' ></i></a>
+        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+      </div>
+    </div>
+    <div class="separator"></div>
+        <div class="bottom">
+            <p>
+                Made With ❤️ By Team DYVH
+            </p>
+        </div>
+  </footer>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script src="product.js"></script>
+      <script src="script.js"></script>
+
+      
+</body>
+
+</html>
+
+
