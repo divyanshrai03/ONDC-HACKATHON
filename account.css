@@ -1,0 +1,552 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background: -o-linear-gradient(350deg, #7AABC9, #FFF);
+    background: -o-linear-gradient(293deg, #7AABC9, #FFF);
+    background: linear-gradient(157deg, #7AABC9, #FFF);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+
+nav {
+  background-color: hsla(200, 56%, 13%, 0.592);
+}
+
+nav a {
+  float: left;
+  display: block;
+  color:hsla(200, 56%, 13%, 0.592);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.dropdown {
+  display: inline-block;
+  overflow: hidden;
+  margin-left: -10%;
+  margin-right: 10%;
+}
+
+.dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;       /********************* OPINION ***********************/
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  margin-top: 5px;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: hsla(200, 55%, 13%, 0.485);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-container {
+  float: left;
+  margin-top: 8px;
+  margin-left: 10%;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar {
+  display: inline;
+  padding: 10px;
+  font-size: 18px;
+  width: 200%;
+  margin-left: 330%;
+  border: none;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid black; /* Add border color */
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.search-bar:focus {
+  background-color: #fff;
+}
+
+.user-logo {
+  float: right;
+  padding: 85px 16px;
+  color: white;
+  border-radius: 10%;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.user-logo img{
+  border-radius: 15px;
+  width: 32px;
+  height: 32px;
+  margin-left: -65%;
+  cursor: pointer;
+  margin-top: -25%;
+}
+
+
+.user-logo {
+  position: relative;
+  top: -65px;
+  display: inline-block;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  left: -55px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.user-logo:hover .menu-content,
+.user-logo:focus-within .menu-content {
+  display: block;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+
+.dropdown-content {
+  opacity: 0;
+  transform: scale(0.8);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.search-bar {
+  border-bottom: 0px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.search-bar:focus {
+  border-bottom: 2px solid #4CAF50; /* Change to your desired color */
+}
+
+
+body {
+  background: linear-gradient(45deg, #FFF, #7AABC9, hsla(200, 55%, 13%, 0.485), #7AABC9, #FFF);
+  background-size: 200% 200%;
+  transition: background 0.5s ease; /* Add transition property */
+  animation: gradientAnimation 5s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+.container {
+  display: flex;
+  margin-top: 8%;
+  height: 100vh;
+  margin-left: 4%;
+}
+
+.vertical-line {
+  border-left: 2px solid #fff; 
+  height: 100%;
+  margin-top: -7%;
+
+}
+
+.horizontal-line {
+  border-top: 2px solid #fff; 
+  width: 98%; 
+  margin-bottom: 40%;
+  margin-left: -14%;
+}
+
+.container h2{
+  margin-top: -75px;
+  margin-right: 32px;
+}
+
+
+
+.profile-card{
+    width: 850px;
+    margin: 100px auto;
+    padding: 20px;
+    margin-top: -47%;
+    margin-left: 20%;
+    /* background-color: linear-gradient(135deg, #3498db, #2c3e50); */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.profile-card h2{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -1px;
+}
+
+.profile-card h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, #7AABC9 1.93%, #0C0F1A 100%);
+    margin-top: 8px;
+}
+
+#name {
+    font-size: 20px;
+    color: #fff;
+    margin-top: -22px;
+    margin-left: 175px;
+}
+
+.profile-info{
+    margin-top: -35%;
+    margin-left: 10%;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: black;
+
+}
+
+
+#user-image {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  margin-left: 75%; 
+  margin-top: 40%;
+  margin-bottom: -33%;
+}
+
+#user-image-container {
+  position: relative;
+}
+
+
+#edit-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white; /* Choose your button color */
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0; /* Initially hide the edit button */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+#edit-image svg {
+  width: 24px;
+  fill: black; 
+  margin-bottom: -223px;/* Choose your icon color */
+}
+
+
+#user-image-container:hover #user-image {
+  transform: scale(1.1); /* Increase size on hover */
+  transition: transform 0.4s ease-in; /* Add a smooth transition effect */
+}
+
+#user-image-container:hover #edit-image {
+  opacity: 1; /* Show the edit button on hover */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+
+p{
+    color: black;
+}
+
+#name, #mobile, #email, #gender, #dob, #alternate, #address{
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+#mobile{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#email{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#gender{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#dob{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#alternate{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#address{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+.edit-button{
+    background-color: hsla(200, 56%, 13%, 0.592);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 35%;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s;
+}
+
+
+.edit-button:hover {
+    background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    padding: 55px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: hsla(200, 56%, 13%, 0.592);
+    margin-top: -12%;
+  }
+  
+  footer .top,
+  footer .bottom{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  footer .top .social-links{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    font-size: 22px;
+  }
+  
+  footer .separator{
+    width: 100%;
+    height: 1px;
+    background-color: hsla(200, 56%, 13%, 0.592);
+    margin: 30px 0 20px;
+  }
+  
+  footer .bottom p{
+    font-size: 12px;
+  }
+  
+  footer .bottom .links a{
+    font-size: 12px;
+    margin-left: 14px;
+  }
+  
+/* 
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.profile-card {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-card h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+p {
+    margin: 0;
+    color: #777;
+}
+
+#name {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#mobile, #email, #gender, #dob, #alternate, #address {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.edit-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #2980b9;
+}
+
+
+.edit-button {
+    background: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.edit-button:hover {
+    background: #218c56;
+}
+
+ */
+

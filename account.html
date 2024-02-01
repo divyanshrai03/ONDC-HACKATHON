@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">Electronics</button>
+            <div class="dropdown-content">
+                <a href="#laptop">Laptop</a>
+                <a href="#mobile">Mobile</a>
+                <a href="#tv">TV</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Fashion</button>
+            <div class="dropdown-content">
+                <a href="#men">Men</a>
+                <a href="#women">Women</a>
+                <a href="#kid">Kid</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Accessories</button>
+            <div class="dropdown-content">
+                <a href="#watch">Watch</a>
+                <a href="#ring">Ring</a>
+                <a href="#necklace">Necklace</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Home Decor</button>
+            <div class="dropdown-content">
+                <a href="#curtain">Curtain</a>
+                <a href="#blanket">Blanket</a>
+                <a href="#decorative">Decorative</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Kitchen</button>
+            <div class="dropdown-content">
+                <a href="#utensils">Utensils</a>
+                <a href="#cookware">Cookware</a>
+                <a href="#appliances">Appliances</a>
+            </div>
+        </div>
+    
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar" id="searchBar">
+        </div>
+    
+    
+        <div class="user-logo">
+          <img src="logo.jpg" alt="User Logo" width="30" height="30">
+          <div class="menu-content">
+            <a href="#account-info">My Account</a>
+            <a href="#order">My Order</a>
+            <a href="#wishlist">My Wishlist</a>
+            <a href="#contactus">Contact Us</a>
+            <a href="login_reg.html">Log Out</a>
+          </div>
+        </div>    
+      </nav>
+
+      <div class="container">
+        <h2 >My Account</h2>
+        <div class="vertical-line"></div>
+        <div class="horizontal-line"></div>
+      </div>
+    <div class="profile-card">
+        <h2>My Profile</h2>
+        <div class="profile-info">
+            <div id="user-image-container">
+                <img src="batman2.png" alt="User Image" id="user-image">
+                <div id="edit-image" onclick="editImage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="16"/>
+                        <line x1="8" y1="12" x2="16" y2="12"/>
+                    </svg>
+                </div>
+            </div>
+            <label>Name: <p id="name" contentEditable="false">Divyansh Rai</p></label>
+            <label>Mobile No.: <p id="mobile" contentEditable="false">7388889908</p></label>
+            <label>Email: <p id="email" contentEditable="false">ce.divyanshrai@gmail.com</p></label>
+            <label>Gender: <p id="gender" contentEditable="false">Male</p></label>
+            <label>Date of Birth: <p id="dob" contentEditable="false">March 03, 2003</p></label>
+            <label>Alternate No.: <p id="alternate" contentEditable="false">852478154</p></label>
+            <label>Address: <p id="address" contentEditable="false">Chennai, Tamil Nadu</p></label>
+
+            <button class="edit-button" onclick="enableEditing()">Edit Profile</button>
+        </div>
+    </div>
+      
+
+      <!-- <footer>
+        <div class="top">
+          <div class="social-links">
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+          </div>
+        </div>
+        <div class="separator"></div>
+            <div class="bottom">
+                <p>
+                    Made With ❤️ By Team DYVH
+                </p>
+            </div>
+      </footer> -->
+      <script>
+
+function editImage() {
+        // Trigger click on the hidden file input to open the file dialog
+        document.getElementById('image-input').click();
+    }
+
+    // Function to handle image upload
+    function handleImageUpload(event) {
+        const fileInput = event.target;
+        const file = fileInput.files[0];
+
+        if (file) {
+            // Use FileReader to read the selected image and set it as the source for the user image
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('user-image').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+        function saveChanges() {
+            // Disable editing for input fields
+            document.getElementById('name').contentEditable = false;
+            document.getElementById('mobile').contentEditable = false;
+            document.getElementById('email').contentEditable = false;
+            document.getElementById('gender').contentEditable = false;
+            document.getElementById('dob').contentEditable = false;
+            document.getElementById('alternate').contentEditable = false;
+            document.getElementById('address').contentEditable = false;
+
+            // Change the button text and onclick function back to edit
+            document.querySelector('.edit-button').innerText = 'Edit Profile';
+            document.querySelector('.edit-button').onclick = enableEditing;
+        }
+    </script>
+    <input type="file" id="image-input" style="display: none;" accept="image/*" onchange="handleImageUpload(event)">
+</body>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</html>
