@@ -71,9 +71,22 @@
       </nav>
 
       <div class="container">
-        <h2 >My Account</h2>
+        <h2>My Account</h2>
+        <h4>Divyansh Rai</h4>
         <div class="vertical-line"></div>
         <div class="horizontal-line"></div>
+        <div class="orders"><p>Orders and Returns</p>
+            <div class="horizontal-line1"></div>
+        </div>
+        <div class="wishlist"><p>Wishlist</p>
+            <div class="horizontal-line2"></div>
+        </div>
+        <div class="address"><p>Address</p>
+            <div class="horizontal-line3"></div>
+        </div>
+        <div class="payment"><p>Saved Cards <br>and Saved UPI</p>
+            <div class="horizontal-line4"></div>
+        </div>
       </div>
     <div class="profile-card">
         <h2>My Profile</h2>
@@ -101,7 +114,7 @@
     </div>
       
 
-      <!-- <footer>
+      <footer>
         <div class="top">
           <div class="social-links">
             <a href="#"><i class='bx bxl-instagram' ></i></a>
@@ -114,7 +127,7 @@
                     Made With ❤️ By Team DYVH
                 </p>
             </div>
-      </footer> -->
+      </footer> 
       <script>
 
 function editImage() {
@@ -136,6 +149,20 @@ function editImage() {
             reader.readAsDataURL(file);
         }
     }
+
+    function enableEditing() {
+
+            document.getElementById('name').contentEditable = true;
+            document.getElementById('mobile').contentEditable = true;
+            document.getElementById('email').contentEditable = true;
+            document.getElementById('gender').contentEditable = true;
+            document.getElementById('dob').contentEditable = true;
+            document.getElementById('alternate').contentEditable = true;
+            document.getElementById('address').contentEditable = true;
+
+            document.querySelector('.edit-button').innerText = 'Save Changes';
+            document.querySelector('.edit-button').onclick = saveChanges;
+        }
         function saveChanges() {
             // Disable editing for input fields
             document.getElementById('name').contentEditable = false;
