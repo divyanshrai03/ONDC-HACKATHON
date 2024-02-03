@@ -61,19 +61,66 @@
             <input type="text" placeholder="Search..." class="search-bar" id="searchBar">
         </div>
     
+        <div class="wishlist">
+          <img src="add-to-favorites.png" alt="wishlist" id="clickableImage">
+        </div>
+    
+        <div class="cart">
+          <img src="add-to-basket.png" alt="cart"  id="clickableImage2">
+        </div>
         <div class="user-logo">
-            <img src="logo.jpg" alt="User Logo" width="30" height="30">
-            <div class="menu-content">
-              <a href="#account-info">My Account</a>
-              <a href="#order">My Order</a>
-              <a href="#wishlist">My Wishlist</a>
-              <a href="#contactus">Contact Us</a>
-              <a href="login_reg.html">Log Out</a>
-            </div>
+          <img src="logo.jpg" alt="User Logo" width="30" height="30">
+          <div class="menu-content">
+            <a href="account.html">My Account</a>
+            <a href="#order">My Order</a>
+            <a href="wishlist.html">My Wishlist</a>
+            <a href="#contactus">Contact Us</a>
+            <a href="login_reg.html">Log Out</a>
           </div>
-      
+        </div>
+    
+    
       </nav>
-      
+
+      <div class="container">
+        <div class="mainImage">
+            <img src="tranding-food-1.png" alt="#1">
+        </div>
+        <div class="vertical-line"> </div>
+        <div class="sideImage">
+            <img src="tranding-food-2.png" alt="#2" onclick="changeImage('tranding-food-2.png')">
+            <img src="tranding-food-3.png" alt="#3" onclick="changeImage('tranding-food-3.png')">
+            <img src="tranding-food-4.png" alt="#4" onclick="changeImage('tranding-food-4.png')">
+            <img src="tranding-food-5.png" alt="#5" onclick="changeImage('tranding-food-5.png')">
+        </div>
+      </div>
+      <div class="vertical-line"> </div>
+      <div class="product-container">
+        <div class="product-details">
+            <h1>Product Name</h1>
+            <div class="ratings">⭐⭐⭐⭐⭐</div>
+            <p>Reviews: 5</p>
+            <p>Size: XL</p>
+            <p>Color: Blue</p>
+            <p>Material: Cotton</p>
+            <p>Price: Rs. 6,969</p>
+            <p>Availability: In Stock</p>
+            <p>Shipping: Free Shipping</p>
+            <p>Estimated Delivery: <span id="deliveryDate"></span></p>
+            <div class="add-to-cart-btn" onclick="addToCart()">
+                <img src="add-to-basket.png" alt="cart">
+            </div>
+            <div class="add-to-wishlist-btn" onclick="addToWishlist()">
+                <img src="add-to-favorites.png" alt="wishlist">
+            </div>
+            <div class="buy-now-btn" onclick="buyNow()">
+                <img src="buy.png" alt="buy">
+            </div>
+            <!-- <button class="buy-now-btn" onclick="buyNow()">Buy Now</button>
+            <button class="wishlist-btn" onclick="addToWishlist()">Add to Wishlist</button> -->
+        </div>
+    </div>
+<!--       
 <div class="container">
     <div class="product-card">
         <div class="product-images">
@@ -101,7 +148,7 @@
             <button class="wishlist-btn" onclick="addToWishlist()">Add to Wishlist</button>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="user-reviews">
     <h2>User Reviews</h2>
@@ -216,17 +263,33 @@
             </p>
         </div>
   </footer>
-
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       <script src="product.js"></script>
       <script src="script.js"></script>
 
-      
+      <script>
+        // Get the image element by its ID
+        var clickableImage = document.getElementById("clickableImage");
+    
+        // Add a click event listener to the image
+        clickableImage.addEventListener("click", function() {
+            // Redirect to the next page when the image is clicked
+            window.location.href = "wishlist.html";
+        });
+    </script>
+      <script>
+        // Get the image element by its ID
+        var clickableImage = document.getElementById("clickableImage2");
+    
+        // Add a click event listener to the image
+        clickableImage.addEventListener("click", function() {
+            // Redirect to the next page when the image is clicked
+            window.location.href = "order.html";
+        });
+    </script>
 </body>
-
 </html>
 
 
