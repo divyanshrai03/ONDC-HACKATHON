@@ -1,218 +1,570 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Page</title>
-    <link rel="stylesheet" href="account.css">
-</head>
-<body>
-    <nav>
-        <div class="dropdown">
-            <button class="dropbtn">Electronics</button>
-            <div class="dropdown-content">
-                <a href="#laptop">Laptop</a>
-                <a href="#mobile">Mobile</a>
-                <a href="#tv">TV</a>
-            </div>
-        </div>
-    
-        <div class="dropdown">
-            <button class="dropbtn">Fashion</button>
-            <div class="dropdown-content">
-                <a href="#men">Men</a>
-                <a href="#women">Women</a>
-                <a href="#kid">Kid</a>
-            </div>
-        </div>
-    
-        <div class="dropdown">
-            <button class="dropbtn">Accessories</button>
-            <div class="dropdown-content">
-                <a href="#watch">Watch</a>
-                <a href="#ring">Ring</a>
-                <a href="#necklace">Necklace</a>
-            </div>
-        </div>
-    
-        <div class="dropdown">
-            <button class="dropbtn">Home Decor</button>
-            <div class="dropdown-content">
-                <a href="#curtain">Curtain</a>
-                <a href="#blanket">Blanket</a>
-                <a href="#decorative">Decorative</a>
-            </div>
-        </div>
-    
-        <div class="dropdown">
-            <button class="dropbtn">Kitchen</button>
-            <div class="dropdown-content">
-                <a href="#utensils">Utensils</a>
-                <a href="#cookware">Cookware</a>
-                <a href="#appliances">Appliances</a>
-            </div>
-        </div>
-    
-        <div class="search-container">
-            <input type="text" placeholder="Search..." class="search-bar" id="searchBar">
-        </div>
-    
-        <div class="wishlist">
-          <img src="add-to-favorites.png" alt="wishlist" id="clickableImage">
-        </div>
-    
-        <div class="cart">
-          <img src="add-to-basket.png" alt="cart"  id="clickableImage2">
-        </div>
-        <div class="user-logo">
-          <img src="logo.jpg" alt="User Logo" width="30" height="30">
-          <div class="menu-content">
-            <a href="account.html">My Account</a>
-            <a href="#order">My Order</a>
-            <a href="wishlist.html">My Wishlist</a>
-            <a href="#contactus">Contact Us</a>
-            <a href="login_reg.html">Log Out</a>
-          </div>
-        </div>
-    
-    
-      </nav>
-
-      <div class="container">
-        <h2><a href="account.html"></a>My Account</h2>
-        <h4>Divyansh Rai</h4>
-        <div class="vertical-line"></div>
-        <div class="horizontal-line"></div>
-        <div class="orders">
-            <p>Orders and Returns</p>
-            <div class="horizontal-line1"></div>
-        </div>
-        <div class="wishlist"><p>Wishlist</p>
-            <div class="horizontal-line2"></div>
-        </div>
-        <div class="address"><p>Address</p>
-            <div class="horizontal-line3"></div>
-        </div>
-        <div class="payment"><p>Saved Cards <br>and Saved UPI</p>
-            <div class="horizontal-line4"></div>
-        </div>
-      </div>
-    <div class="profile-card">
-        <h2>My Profile</h2>
-        <div class="profile-info">
-            <div id="user-image-container">
-                <img src="batman2.png" alt="User Image" id="user-image">
-                <div id="edit-image" onclick="editImage()">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <line x1="12" y1="8" x2="12" y2="16"/>
-                        <line x1="8" y1="12" x2="16" y2="12"/>
-                    </svg>
-                </div>
-            </div>
-            <label>Name: <p id="name" contentEditable="false">Divyansh Rai</p></label>
-            <label>Mobile No.: <p id="mobile" contentEditable="false">7388889908</p></label>
-            <label>Email: <p id="email" contentEditable="false">ce.divyanshrai@gmail.com</p></label>
-            <label>Gender: <p id="gender" contentEditable="false">Male</p></label>
-            <label>Date of Birth: <p id="dob" contentEditable="false">March 03, 2003</p></label>
-            <label>Alternate No.: <p id="alternate" contentEditable="false">852478154</p></label>
-            <label>Address: <p id="address" contentEditable="false">Chennai, Tamil Nadu</p></label>
-
-            <button class="edit-button" onclick="enableEditing()">Edit Profile</button>
-        </div>
-    </div>
-      
-
-      <footer>
-        <div class="top">
-          <div class="social-links">
-            <a href="#"><i class='bx bxl-instagram' ></i></a>
-            <a href="#"><i class='bx bxl-linkedin' ></i></a>
-          </div>
-        </div>
-        <div class="separator"></div>
-            <div class="bottom">
-                <p>
-                    Made With ❤️ By Team DYVH
-                </p>
-            </div>
-      </footer> 
-      <script>
-
-function editImage() {
-        // Trigger click on the hidden file input to open the file dialog
-        document.getElementById('image-input').click();
-    }
-
-    // Function to handle image upload
-    function handleImageUpload(event) {
-        const fileInput = event.target;
-        const file = fileInput.files[0];
-
-        if (file) {
-            // Use FileReader to read the selected image and set it as the source for the user image
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                document.getElementById('user-image').src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-    }
-
-    function enableEditing() {
-
-            document.getElementById('name').contentEditable = true;
-            document.getElementById('mobile').contentEditable = true;
-            document.getElementById('email').contentEditable = true;
-            document.getElementById('gender').contentEditable = true;
-            document.getElementById('dob').contentEditable = true;
-            document.getElementById('alternate').contentEditable = true;
-            document.getElementById('address').contentEditable = true;
-
-            document.querySelector('.edit-button').innerText = 'Save Changes';
-            document.querySelector('.edit-button').onclick = saveChanges;
-        }
-        function saveChanges() {
-            // Disable editing for input fields
-            document.getElementById('name').contentEditable = false;
-            document.getElementById('mobile').contentEditable = false;
-            document.getElementById('email').contentEditable = false;
-            document.getElementById('gender').contentEditable = false;
-            document.getElementById('dob').contentEditable = false;
-            document.getElementById('alternate').contentEditable = false;
-            document.getElementById('address').contentEditable = false;
-
-            // Change the button text and onclick function back to edit
-            document.querySelector('.edit-button').innerText = 'Edit Profile';
-            document.querySelector('.edit-button').onclick = enableEditing;
-        }
-    </script>
-    <input type="file" id="image-input" style="display: none;" accept="image/*" onchange="handleImageUpload(event)">
-</body>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
-<script>
-    // Get the image element by its ID
-    var clickableImage = document.getElementById("clickableImage");
 
-    // Add a click event listener to the image
-    clickableImage.addEventListener("click", function() {
-        // Redirect to the next page when the image is clicked
-        window.location.href = "wishlist.html";
-    });
-</script>
-  <script>
-    // Get the image element by its ID
-    var clickableImage = document.getElementById("clickableImage2");
 
-    // Add a click event listener to the image
-    clickableImage.addEventListener("click", function() {
-        // Redirect to the next page when the image is clicked
-        window.location.href = "order.html";
-    });
-</script>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background: -o-linear-gradient(350deg, #7AABC9, #FFF);
+    background: -o-linear-gradient(293deg, #7AABC9, #FFF);
+    background: linear-gradient(157deg, #7AABC9, #FFF);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+
+nav {
+  background-color: hsla(200, 56%, 13%, 0.592);
+  width: 100%;
+  height: 60px;
+  margin: 0;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color:hsla(200, 56%, 13%, 0.592);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: white;
+}
+
+.dropdown {
+  display: inline-block;
+  overflow: hidden;
+  margin-left: -10%;
+  margin-right: 10%;
+}
+
+.dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;       /********************* OPINION ***********************/
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  margin-top: 5px;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: hsla(200, 55%, 13%, 0.485);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-container {
+  float: left;
+  margin-top: 8px;
+  margin-left: 10%;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar {
+  display: inline;
+  padding: 10px;
+  font-size: 18px;
+  width: 200%;
+  margin-left: 330%;
+  border: none;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid black; /* Add border color */
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.search-bar:focus {
+  background-color: #fff;
+}
+
+.user-logo {
+  float: right;
+  padding: 85px 16px;
+  color: white;
+  border-radius: 25%;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.user-logo img{
+  border-radius: 75px;
+  border: 2px solid #222224;
+  width: 32px;
+  height: 32px;
+  margin-left: -65%;
+  cursor: pointer;
+  margin-top: -25%;
+}
+
+
+.user-logo {
+  position: relative;
+  top: -160px;
+  display: inline-block;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  left: -55px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.user-logo:hover .menu-content,
+.user-logo:focus-within .menu-content {
+  display: block;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+.dropdown-content {
+  opacity: 0;
+  transform: scale(0.8);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.search-bar {
+  border-bottom: 0px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.search-bar:focus {
+  border-bottom: 2px solid #4CAF50; /* Change to your desired color */
+}
+
+
+.wishlist img{
+  width: 2%;
+  margin-left: 88%;
+  margin-top: -5%;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+
+
+.cart img{
+  cursor: pointer;
+  width: 2%;
+  height: 1%;
+  margin-left: 92%;
+  margin-top: -7%;
+  margin-bottom: 48px;
+}
+
+body {
+  background: linear-gradient(45deg, #FFF, #7AABC9, hsla(200, 55%, 13%, 0.485), #7AABC9, #FFF);
+  background-size: 200% 200%;
+  transition: background 0.5s ease; /* Add transition property */
+  animation: gradientAnimation 5s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 9%;
+  height: 100vh;
+  margin-left: 4%;
+}
+
+.vertical-line {
+  border-left: 2px solid #fff; 
+  height: 100%;
+  margin-top: -7%;
+
+}
+
+.horizontal-line {
+  border-top: 2px solid #fff; 
+  width: 98%; 
+  margin-bottom: 40%;
+  margin-left: -14%;
+}
+
+.container h2{
+  margin-top: -4.5%;
+  margin-right: 32px;
+}
+
+.container h4{
+  margin-top: -2%;
+  margin-left: -13%;
+}
+
+h4{
+  margin-right: 5%;
+}
+
+.orders {
+  margin: 20px;
+  margin-left: -93.5%;
+}
+
+.orders p{
+  margin-left: -45px;
+  margin-top: 4%;
+  font-weight: bold;
+}
+
+.wishlist p{
+  margin-left: -265%;
+  margin-top: 120%;
+  font-weight: bold;
+}
+
+.address p{
+  margin-left: -365%;
+  margin-top: 200%;
+  font-weight: bold;
+}
+
+.payment p{
+  margin-left: -265%;
+  margin-top: 160%;
+  font-weight: bold;
+}
+.horizontal-line1{
+  border-top: 2px solid #fff; 
+  width: 162%; 
+  margin-bottom: 40%;
+  margin-left: -51%;
+}
+
+.horizontal-line2{
+  border-top: 2px solid #fff; 
+  width: 284%; 
+  margin-top: -2%;
+  margin-bottom: 45%;
+  margin-left: -293%;
+}
+
+.horizontal-line3{
+  border-top: 2px solid #fff; 
+  width: 280%; 
+  margin-bottom: 50%;
+  margin-left: -390%;
+}
+
+.horizontal-line4{
+  border-top: 2px solid #fff; 
+  width: 158%; 
+  margin-bottom: 55%;
+  margin-left: -276%;
+}
+
+.profile-card{
+    width: 850px;
+    margin: 100px auto;
+    padding: 20px;
+    margin-top: -47.5%;
+    margin-left: 20%;
+    /* background-color: linear-gradient(135deg, #3498db, #2c3e50); */
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.profile-card h2{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -1px;
+}
+
+.profile-card h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: -webkit-gradient(linear, right top, left top, color-stop(1.93%, #7AABC9), to(#0C0F1A));
+    background: -o-linear-gradient(right, #7AABC9 1.93%, #0C0F1A 100%);
+    background: linear-gradient(270deg, #7AABC9 1.93%, #0C0F1A 100%);
+    margin-top: 8px;
+}
+
+#name {
+    font-size: 20px;
+    color: #fff;
+    margin-top: -22px;
+    margin-left: 175px;
+}
+
+.profile-info{
+    margin-top: -35%;
+    margin-left: 10%;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: black;
+
+}
+
+
+#user-image {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  margin-left: 75%; 
+  margin-top: 40%;
+  margin-bottom: -33%;
+}
+
+#user-image-container {
+  position: relative;
+}
+
+
+#edit-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white; /* Choose your button color */
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0; /* Initially hide the edit button */
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+#edit-image svg {
+  width: 24px;
+  fill: black; 
+  margin-bottom: -223px;/* Choose your icon color */
+}
+
+
+#user-image-container:hover #user-image {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); /* Increase size on hover */
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
+  -o-transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in; /* Add a smooth transition effect */
+}
+
+#user-image-container:hover #edit-image {
+  opacity: 1; /* Show the edit button on hover */
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+
+p{
+    color: black;
+}
+
+#name, #mobile, #email, #gender, #dob, #alternate, #address{
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+#mobile{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#email{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#gender{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#dob{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#alternate{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+#address{
+    margin-top: -22px;
+    margin-left: 175px;
+    color: black;
+}
+
+.edit-button{
+    background-color: hsla(200, 56%, 13%, 0.592);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 35%;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+
+.edit-button:hover {
+    background: black;
+}
+
+
+footer{
+    padding: 55px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: hsla(200, 56%, 13%, 0.592);
+    margin-top: 12%;
+  }
+  
+  footer .top,
+  footer .bottom{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  footer .top .social-links{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    font-size: 22px;
+  }
+  
+  footer .separator{
+    width: 100%;
+    height: 1px;
+    background-color: hsla(200, 56%, 13%, 0.592);
+    margin: 30px 0 20px;
+  }
+  
+  footer .bottom p{
+    font-size: 12px;
+  }
+  
+  footer .bottom .links a{
+    font-size: 12px;
+    margin-left: 14px;
+  }
+  
