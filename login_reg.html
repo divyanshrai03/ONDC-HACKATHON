@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    -->
     <link rel="stylesheet" href="log_reg_styles.css">
     <title>Login Page</title>
 </head>
@@ -17,8 +17,12 @@
             <form>
                 <h1>Create Account</h1>
                 <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon">
+                        <img src="fb.png" alt="fb">
+                    </a>
+                    <a href="#" class="icon">
+                        <img src="google.png" alt="google">
+                    </a>
                 </div>
                 <span>or use your email for registeration</span>
                 <input type="text" placeholder="Name">
@@ -31,8 +35,12 @@
             <form>
                 <h1>Sign In</h1>
                 <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon" id="fb">
+                        <img src="fb.png" alt="fb">
+                    </a>
+                    <a href="#" class="icon" id="google">
+                        <img src="google.png" alt="google">
+                    </a>
                 </div>
                 <span>or use your email password</span>
                 <input type="email" placeholder="Email">
