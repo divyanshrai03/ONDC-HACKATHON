@@ -195,19 +195,14 @@ body {
     }
 }
 
-.social-icons img{
+#social-icons1 img{
     width: 40%;
-    border-radius: 10px;
+
 }
 
 
-.social-icons{
-    margin: 15px;
-}
-
-
-.social-icons a{
-    border: 1px solid #ccc;
+#social-icons1 a{
+    border: 1px solid black;
     border-radius: 20%;
     margin: 0 3px;
     width: 40px;
@@ -223,14 +218,20 @@ body {
             align-items: center;
 }
 
-/* 
-.social-icons{
-    margin: 20px 0;
+#social-icons2 img{
+    width: 40%;
 }
 
-.social-icons a{
-    border: 1px solid #ccc;
+.social-icons{
+    margin: 10px;
+}
+
+#social-icons2 a{
+    border: 1px solid black;
     border-radius: 20%;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -240,10 +241,9 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0 3px;
-    width: 40px;
-    height: 40px;
-} */
+}
+
+
 
 .toggle-container{
     position: absolute;
