@@ -195,6 +195,35 @@ body {
     }
 }
 
+.social-icons img{
+    width: 40%;
+    border-radius: 10px;
+}
+
+
+.social-icons{
+    margin: 15px;
+}
+
+
+.social-icons a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+/* 
 .social-icons{
     margin: 20px 0;
 }
@@ -214,7 +243,7 @@ body {
     margin: 0 3px;
     width: 40px;
     height: 40px;
-}
+} */
 
 .toggle-container{
     position: absolute;
