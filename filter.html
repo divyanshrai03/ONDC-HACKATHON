@@ -57,12 +57,26 @@
             <input type="text" placeholder="Search..." class="search-bar" id="searchBar">
         </div>
     
-        <div class="user-logo">
-            <img src="logo.jpg" alt="User Logo" width="30" height="30">
+        <div class="wishlist">
+          <img src="add-to-favorites.png" alt="wishlist" id="clickableImage">
         </div>
-    </nav>
-
-
+    
+        <div class="cart">
+          <img src="add-to-basket.png" alt="cart"  id="clickableImage2">
+        </div>
+        <div class="user-logo">
+          <img src="logo.jpg" alt="User Logo" width="30" height="30">
+          <div class="menu-content">
+            <a href="account.html">My Account</a>
+            <a href="#order">My Order</a>
+            <a href="wishlist.html">My Wishlist</a>
+            <a href="#contactus">Contact Us</a>
+            <a href="login_reg.html">Log Out</a>
+          </div>
+        </div>
+    
+    
+      </nav>
         <div class="product-container">
             <div class="product-box">Product 1</div>
             <div class="product-box">Product 2</div>
@@ -102,22 +116,23 @@
               <a href="#">next..</a>
             </div>
           </div>
-</body>
 
-<footer>
-    <div class="top">
-      <div class="social-links">
-        <a href="#"><i class='bx bxl-instagram' ></i></a>
-        <a href="#"><i class='bx bxl-linkedin' ></i></a>
-      </div>
-    </div>
-    <div class="separator"></div>
-        <div class="bottom">
-            <p>
-                Made With ❤️ By Team DYVH
-            </p>
-        </div>
-  </footer>
+          <footer>
+            <div class="top">
+              <div class="social-links">
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin' ></i></a>
+              </div>
+            </div>
+            <div class="separator"></div>
+                <div class="bottom">
+                    <p>
+                        Made With ❤️ By Team DYVH
+                    </p>
+                </div>
+          </footer>
+        
+</body>
 
 <script>
     const searchPlaceholder = document.getElementById('searchBar');
@@ -141,4 +156,25 @@
     // Initial call
     typeText();
   </script>
+  <script>
+    // Get the image element by its ID
+    var clickableImage = document.getElementById("clickableImage");
+
+    // Add a click event listener to the image
+    clickableImage.addEventListener("click", function() {
+        // Redirect to the next page when the image is clicked
+        window.location.href = "wishlist.html";
+    });
+</script>
+  <script>
+    // Get the image element by its ID
+    var clickableImage = document.getElementById("clickableImage2");
+
+    // Add a click event listener to the image
+    clickableImage.addEventListener("click", function() {
+        // Redirect to the next page when the image is clicked
+        window.location.href = "order.html";
+    });
+</script>
+
 </html>
