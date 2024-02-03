@@ -57,25 +57,34 @@
             <input type="text" placeholder="Search..." class="search-bar" id="searchBar">
         </div>
     
+        <div class="wishlist">
+          <img src="add-to-favorites.png" alt="wishlist" id="clickableImage">
+        </div>
     
+        <div class="cart">
+          <img src="add-to-basket.png" alt="cart"  id="clickableImage2">
+        </div>
         <div class="user-logo">
           <img src="logo.jpg" alt="User Logo" width="30" height="30">
           <div class="menu-content">
-            <a href="#account-info">My Account</a>
+            <a href="account.html">My Account</a>
             <a href="#order">My Order</a>
-            <a href="#wishlist">My Wishlist</a>
+            <a href="wishlist.html">My Wishlist</a>
             <a href="#contactus">Contact Us</a>
             <a href="login_reg.html">Log Out</a>
           </div>
-        </div>    
+        </div>
+    
+    
       </nav>
 
       <div class="container">
-        <h2>My Account</h2>
+        <h2><a href="account.html"></a>My Account</h2>
         <h4>Divyansh Rai</h4>
         <div class="vertical-line"></div>
         <div class="horizontal-line"></div>
-        <div class="orders"><p>Orders and Returns</p>
+        <div class="orders">
+            <p>Orders and Returns</p>
             <div class="horizontal-line1"></div>
         </div>
         <div class="wishlist"><p>Wishlist</p>
@@ -186,4 +195,24 @@ function editImage() {
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
+<script>
+    // Get the image element by its ID
+    var clickableImage = document.getElementById("clickableImage");
+
+    // Add a click event listener to the image
+    clickableImage.addEventListener("click", function() {
+        // Redirect to the next page when the image is clicked
+        window.location.href = "wishlist.html";
+    });
+</script>
+  <script>
+    // Get the image element by its ID
+    var clickableImage = document.getElementById("clickableImage2");
+
+    // Add a click event listener to the image
+    clickableImage.addEventListener("click", function() {
+        // Redirect to the next page when the image is clicked
+        window.location.href = "order.html";
+    });
+</script>
 </html>
